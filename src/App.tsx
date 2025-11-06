@@ -18,7 +18,7 @@ function App() {
 
 const onSubmit = (agentDpt:string) => {
     // localStorage.setItem("lisaAgentSupportNAme", JSON.stringify(lisaAgentSupportNAme));
-    agentDpt == "Residential" ? alert(`Hi ${lisaAgentName}, ${lisaAgentSupportNAme} here from the ppm team. How can I help`):alert(`Hi ${lisaAgentName}, ${lisaAgentSupportNAme} here. How can I help`);
+    agentDpt == "Residential" ? alert(`Hi ${lisaAgentName}, ${lisaAgentSupportNAme} here from the ppm team. How can I help ?`):alert(`Hi ${lisaAgentName}, ${lisaAgentSupportNAme} here. How can I help ?`);
 }
   return (
     <>
