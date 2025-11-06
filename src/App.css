@@ -22,7 +22,7 @@ button:hover {
   background-color: lightpink;
 }
 
-form {
+.formContainer {
   background-color: rebeccapurple;
   padding: 4rem;
   border-radius: 1rem;
