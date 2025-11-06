@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+label {
+  font-size: 1.7rem;
+}
+p {
+  font-size: 1.7rem;
+}
+
+button {
+  background-color: purple;
+  padding: 0.5rem;
+  font-size: 1.7rem;
+
+}
+
+button:hover {
+  background-color: lightpink;
+}
+
+form {
+  background-color: rebeccapurple;
+  padding: 4rem;
+  border-radius: 1rem;
+}
+
+input {
+  font-size: 1.5rem;
+}
+
