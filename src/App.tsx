@@ -1,5 +1,6 @@
 import './App.css'
 import {useState, useEffect} from "react";
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
     const [lisaAgentSupportNAme, setLisaAgentSupportNAme] = useState("");
