@@ -1,5 +1,6 @@
 import './App.css'
 import {useState, useEffect} from "react";
+// @ts-ignore
 import { Analytics } from "@vercel/analytics/next"
 
 function App() {
