@@ -19,9 +19,11 @@ function App() {
         localStorage.setItem("storedAgent", lisaAgentSupportNAme);
     }, [lisaAgentSupportNAme]);
 
-    const handleButtonPress = (agentDpt: string) => {
-        GenerateMessage(agentDpt,lisaAgentName,lisaAgentSupportNAme);
+    const handleButtonPress = async (agentDpt: string) => {
+        await GenerateMessage(agentDpt,lisaAgentName,lisaAgentSupportNAme);
+        alert("Message copied to clipboard");
     }
+
     return (
         <div className="formContainer">
             <TextInputComponent htmlFor="agentInput" id="agentInput" label="Please enter your name:"
@@ -36,15 +38,15 @@ function App() {
                                         setLisaAgentNAme(e.target.value)
                                     }
                                 }}/>
-            <button type="submit" onClick={() => {
-                handleButtonPress("Prepay");
+            <button type="submit" onClick={async () => {
+                await handleButtonPress("Prepay");
             }}>Prepay
             </button>
             <br/>
             <br/>
             <button type="submit"
-                    onClick={() => {
-                        handleButtonPress("Residential");
+                    onClick={async() => {
+                        await handleButtonPress("Residential");
                     }}
             >Residential
             </button>
