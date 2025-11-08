@@ -2,6 +2,9 @@ import './App.css'
 import {useState, useEffect} from "react";
 import TextInputComponent from "./components/TextInputComponent";
 
+
+import GenerateMessage from "./logic/GenerateMessage";
+
 function App() {
     const [lisaAgentSupportNAme, setLisaAgentSupportNAme] = useState("");
     const [lisaAgentName, setLisaAgentNAme] = useState("");
@@ -16,8 +19,8 @@ function App() {
         localStorage.setItem("storedAgent", lisaAgentSupportNAme);
     }, [lisaAgentSupportNAme]);
 
-    const onSubmit = (agentDpt: string) => {
-        agentDpt == "Residential" ? alert(`Hi ${lisaAgentName}, ${lisaAgentSupportNAme} here from the ppm team. How can I help ?`) : alert(`Hi ${lisaAgentName}, ${lisaAgentSupportNAme} here. How can I help ?`);
+    const handleButtonPress = (agentDpt: string) => {
+        GenerateMessage(agentDpt,lisaAgentName,lisaAgentSupportNAme);
     }
     return (
         <div className="formContainer">
@@ -33,16 +36,15 @@ function App() {
                                         setLisaAgentNAme(e.target.value)
                                     }
                                 }}/>
-            <p>Is this a prepay agent or Residential agent: </p>
             <button type="submit" onClick={() => {
-                onSubmit("Prepay");
+                handleButtonPress("Prepay");
             }}>Prepay
             </button>
             <br/>
             <br/>
             <button type="submit"
                     onClick={() => {
-                        onSubmit("Residential");
+                        handleButtonPress("Residential");
                     }}
             >Residential
             </button>
