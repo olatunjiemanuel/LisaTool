@@ -43,18 +43,25 @@ function App() {
                                             setLisaAgentNAme(e.target.value)
                                         }
                                     }}/>
+                <div className="buttonsContainer">
                 <button type="submit" onClick={async () => {
                     await handleButtonPress("Prepay");
                 }}>Prepay
                 </button>
-                <br/>
-                <br/>
+
                 <button type="submit"
                         onClick={async () => {
                             await handleButtonPress("Residential");
                         }}
                 >Residential
                 </button>
+                <button type="submit"
+                        onClick={async () => {
+                            await handleButtonPress("responded");
+                        }}
+                >Responded
+                </button>
+                </div>
             </div>
         </>
     )

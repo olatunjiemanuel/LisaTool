@@ -7,6 +7,10 @@ const GenerateMessage = async (agentDpt: string, lisaAgentName:string, lisaAgent
         case "Prepay":
             let message2 = `Hi ${lisaAgentName}, ${lisaAgentSupportNAme} here. How can I help ?`;
             message2 ? await navigator.clipboard.writeText(message2): alert("nothing to copy");
+            break
+        case "responded":
+            let message3 = `Hi ${lisaAgentName}, ${lisaAgentSupportNAme} here. Having a look :)`;
+            message3 ? await navigator.clipboard.writeText(message3): alert("nothing to copy");
     }
 }
 

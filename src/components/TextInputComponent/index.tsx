@@ -1,4 +1,5 @@
 import * as React from "react";
+import './index.css'
 
 interface TextInputComponentProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
@@ -12,7 +13,7 @@ const TextInputComponent = ({onChange, label, textInputValue, htmlFor, id}: Text
     return (
         <div>
             <label htmlFor={htmlFor}>{label}</label>
-            <input type="text" id={id} onChange={onChange} value={textInputValue}>
+            <input className="input" type="text" id={id} onChange={onChange} value={textInputValue}>
             </input>
         </div>
     )
